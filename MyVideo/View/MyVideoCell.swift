@@ -10,12 +10,20 @@ import UIKit
 
 class MyVideoCell: UITableViewCell {
     
+
+    var video: Video? {
+        didSet {
+            thumbnailImageView.image = UIImage(named:(video?.thumbnailFileName)!)
+            authorNameLabel.text = video?.authorName
+        }
+    }
     
     var thumbnailImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 8
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -23,6 +31,7 @@ class MyVideoCell: UITableViewCell {
         let imageView = UIImageView(image: UIImage(named: "btn-play"))
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.backgroundColor = UIColor.clear
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -36,9 +45,9 @@ class MyVideoCell: UITableViewCell {
         return label
     }()
 
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         configure()
     }
     
@@ -47,12 +56,11 @@ class MyVideoCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     func configure() {
         
-        self.addSubview(thumbnailImageView)
-        thumbnailImageView.addSubview(playImageView)
-        thumbnailImageView.addSubview(authorNameLabel)
+       addSubview(thumbnailImageView)
+       addSubview(playImageView)
+       addSubview(authorNameLabel)
         
         NSLayoutConstraint.activate([
             thumbnailImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
@@ -70,11 +78,10 @@ class MyVideoCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             authorNameLabel.topAnchor.constraint(equalTo: playImageView.topAnchor, constant: 8),
-            authorNameLabel.bottomAnchor.constraint(equalTo: playImageView.bottomAnchor, constant: -8),
-            authorNameLabel.leadingAnchor.constraint(equalTo: playImageView.trailingAnchor, constant: 8),
+            authorNameLabel.bottomAnchor.constraint(equalTo: playImageView.bottomAnchor, constant: -4),
+            authorNameLabel.leadingAnchor.constraint(equalTo: playImageView.trailingAnchor, constant: 4),
             authorNameLabel.trailingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor)
             ])
-        
     }
 
 }

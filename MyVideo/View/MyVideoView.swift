@@ -28,7 +28,7 @@ class MyVideoView: UIView {
         tableView = {
             let table = UITableView()
             table.separatorStyle = .none
-            table.register(UITableViewCell.self, forCellReuseIdentifier: "VideoCell")
+            table.register(MyVideoCell.self, forCellReuseIdentifier: "VideoCell")
             return table
         }()
         self.addSubview(tableView)

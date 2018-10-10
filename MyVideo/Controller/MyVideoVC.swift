@@ -40,8 +40,8 @@ class MyVideoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath)
-        cell.textLabel?.text = "\(videos[indexPath.row].authorName)" + " - " + "\(videos[indexPath.row].description)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! MyVideoCell
+        cell.video = videos[indexPath.row]
         return cell
     }
     
@@ -49,4 +49,9 @@ class MyVideoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 250
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("\(videos[indexPath.row].videoFileName)")
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
