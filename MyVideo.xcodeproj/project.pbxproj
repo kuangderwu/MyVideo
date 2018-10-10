@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		18FEFD37216DD54200177582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEFD36216DD54200177582 /* AppDelegate.swift */; };
-		18FEFD39216DD54200177582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEFD38216DD54200177582 /* ViewController.swift */; };
-		18FEFD3C216DD54200177582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEFD3A216DD54200177582 /* Main.storyboard */; };
 		18FEFD3E216DD54400177582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FEFD3D216DD54400177582 /* Assets.xcassets */; };
 		18FEFD41216DD54400177582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEFD3F216DD54400177582 /* LaunchScreen.storyboard */; };
+		18FEFD4A216DD5C700177582 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEFD49216DD5C700177582 /* Video.swift */; };
+		18FEFD4E216DD67500177582 /* MyVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEFD4D216DD67500177582 /* MyVideoVC.swift */; };
+		18FEFD50216DD69000177582 /* MyVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEFD4F216DD69000177582 /* MyVideoView.swift */; };
+		18FEFD52216DDDA300177582 /* MyVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEFD51216DDDA300177582 /* MyVideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18FEFD33216DD54200177582 /* MyVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEFD36216DD54200177582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18FEFD38216DD54200177582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18FEFD3B216DD54200177582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18FEFD3D216DD54400177582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FEFD40216DD54400177582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18FEFD42216DD54400177582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FEFD49216DD5C700177582 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		18FEFD4D216DD67500177582 /* MyVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVideoVC.swift; sourceTree = "<group>"; };
+		18FEFD4F216DD69000177582 /* MyVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVideoView.swift; sourceTree = "<group>"; };
+		18FEFD51216DDDA300177582 /* MyVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		18FEFD35216DD54200177582 /* MyVideo */ = {
 			isa = PBXGroup;
 			children = (
+				18FEFD4C216DD61900177582 /* View */,
+				18FEFD4B216DD60F00177582 /* Controller */,
+				18FEFD48216DD5B200177582 /* Model */,
 				18FEFD36216DD54200177582 /* AppDelegate.swift */,
-				18FEFD38216DD54200177582 /* ViewController.swift */,
-				18FEFD3A216DD54200177582 /* Main.storyboard */,
 				18FEFD3D216DD54400177582 /* Assets.xcassets */,
 				18FEFD3F216DD54400177582 /* LaunchScreen.storyboard */,
 				18FEFD42216DD54400177582 /* Info.plist */,
 			);
 			path = MyVideo;
+			sourceTree = "<group>";
+		};
+		18FEFD48216DD5B200177582 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18FEFD49216DD5C700177582 /* Video.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18FEFD4B216DD60F00177582 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18FEFD4D216DD67500177582 /* MyVideoVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18FEFD4C216DD61900177582 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18FEFD4F216DD69000177582 /* MyVideoView.swift */,
+				18FEFD51216DDDA300177582 /* MyVideoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +154,6 @@
 			files = (
 				18FEFD41216DD54400177582 /* LaunchScreen.storyboard in Resources */,
 				18FEFD3E216DD54400177582 /* Assets.xcassets in Resources */,
-				18FEFD3C216DD54200177582 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FEFD39216DD54200177582 /* ViewController.swift in Sources */,
+				18FEFD50216DD69000177582 /* MyVideoView.swift in Sources */,
+				18FEFD4E216DD67500177582 /* MyVideoVC.swift in Sources */,
+				18FEFD52216DDDA300177582 /* MyVideoCell.swift in Sources */,
+				18FEFD4A216DD5C700177582 /* Video.swift in Sources */,
 				18FEFD37216DD54200177582 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18FEFD3A216DD54200177582 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18FEFD3B216DD54200177582 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18FEFD3F216DD54400177582 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
