@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AVKit
 
 class MyVideoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var myVideoView: MyVideoView!
     var tableView: UITableView!
     var videos = [Video]()
+    var playerController = AVPlayerViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,20 @@ class MyVideoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("\(videos[indexPath.row].videoFileName)")
         tableView.deselectRow(at: indexPath, animated: true)
+        playVideo(at: indexPath)
     }
+    
+    func playVideo(at indexPath: IndexPath) {
+        
+        let selectedVideo = videos[indexPath.row]
+        if let videoPath = Bundle.main.path(forResource: selectedVideo.videoFileName, ofType: "mp4") {
+            let player = AVPlayer(url: URL(fileURLWithPath: videoPath))
+            playerController.player = player
+            self.present(playerController, animated: true) {
+                self.playerController.player?.play()
+            }
+        }
+    }
+    
 }

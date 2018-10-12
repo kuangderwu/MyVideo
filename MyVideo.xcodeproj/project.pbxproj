@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181C0C0A217031A90090F415 /* v1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181C0C04217031A90090F415 /* v1.mp4 */; };
+		181C0C0B217031A90090F415 /* v4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181C0C05217031A90090F415 /* v4.mp4 */; };
+		181C0C0C217031A90090F415 /* v6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181C0C06217031A90090F415 /* v6.mp4 */; };
+		181C0C0D217031A90090F415 /* v2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181C0C07217031A90090F415 /* v2.mp4 */; };
+		181C0C0E217031A90090F415 /* v3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181C0C08217031A90090F415 /* v3.mp4 */; };
+		181C0C0F217031A90090F415 /* v5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 181C0C09217031A90090F415 /* v5.mp4 */; };
 		18FEFD37216DD54200177582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEFD36216DD54200177582 /* AppDelegate.swift */; };
 		18FEFD3E216DD54400177582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FEFD3D216DD54400177582 /* Assets.xcassets */; };
 		18FEFD41216DD54400177582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEFD3F216DD54400177582 /* LaunchScreen.storyboard */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181C0C04217031A90090F415 /* v1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = v1.mp4; path = MyVideo/Videos/v1.mp4; sourceTree = SOURCE_ROOT; };
+		181C0C05217031A90090F415 /* v4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = v4.mp4; path = MyVideo/Videos/v4.mp4; sourceTree = SOURCE_ROOT; };
+		181C0C06217031A90090F415 /* v6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = v6.mp4; path = MyVideo/Videos/v6.mp4; sourceTree = SOURCE_ROOT; };
+		181C0C07217031A90090F415 /* v2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = v2.mp4; path = MyVideo/Videos/v2.mp4; sourceTree = SOURCE_ROOT; };
+		181C0C08217031A90090F415 /* v3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = v3.mp4; path = MyVideo/Videos/v3.mp4; sourceTree = SOURCE_ROOT; };
+		181C0C09217031A90090F415 /* v5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = v5.mp4; path = MyVideo/Videos/v5.mp4; sourceTree = SOURCE_ROOT; };
 		18FEFD33216DD54200177582 /* MyVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEFD36216DD54200177582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FEFD3D216DD54400177582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181C0C10217032280090F415 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				181C0C04217031A90090F415 /* v1.mp4 */,
+				181C0C07217031A90090F415 /* v2.mp4 */,
+				181C0C08217031A90090F415 /* v3.mp4 */,
+				181C0C05217031A90090F415 /* v4.mp4 */,
+				181C0C09217031A90090F415 /* v5.mp4 */,
+				181C0C06217031A90090F415 /* v6.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		18FEFD2A216DD54200177582 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +83,7 @@
 		18FEFD35216DD54200177582 /* MyVideo */ = {
 			isa = PBXGroup;
 			children = (
+				181C0C10217032280090F415 /* Videos */,
 				18FEFD4C216DD61900177582 /* View */,
 				18FEFD4B216DD60F00177582 /* Controller */,
 				18FEFD48216DD5B200177582 /* Model */,
@@ -152,8 +178,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181C0C0F217031A90090F415 /* v5.mp4 in Resources */,
+				181C0C0C217031A90090F415 /* v6.mp4 in Resources */,
+				181C0C0A217031A90090F415 /* v1.mp4 in Resources */,
 				18FEFD41216DD54400177582 /* LaunchScreen.storyboard in Resources */,
 				18FEFD3E216DD54400177582 /* Assets.xcassets in Resources */,
+				181C0C0B217031A90090F415 /* v4.mp4 in Resources */,
+				181C0C0D217031A90090F415 /* v2.mp4 in Resources */,
+				181C0C0E217031A90090F415 /* v3.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
