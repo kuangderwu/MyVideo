@@ -57,6 +57,19 @@ class MyVideoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         playVideo(at: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // 讓Cell出現動畫效果
+        
+        let transformation = CATransform3DTranslate(CATransform3DIdentity, 0, 50, 0)
+        cell.layer.transform = transformation
+        cell.alpha = 0.1
+        
+        UIView.animate(withDuration: 1.0) {
+            cell.layer.transform = CATransform3DIdentity
+            cell.alpha = 1.0
+        }
+    }
+    
     func playVideo(at indexPath: IndexPath) {
         
         let selectedVideo = videos[indexPath.row]
